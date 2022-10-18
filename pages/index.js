@@ -71,7 +71,7 @@ export default function Home() {
     ];
     sgpa = sgpa.filter((grade) => grade !== null && grade <= 10);
 
-    let result = Convert(sgpa, dept);
+    let result = dept !== null && sgpa.length >0 ? Convert(sgpa, dept): '0';
     setCgpa(result);
   };
 
@@ -177,7 +177,7 @@ export default function Home() {
                 </FormControl>
 
                 <TextField
-                  required
+            
                   label="First Sem SGPA"
                   placeholder="Leave blank if no SGPA"
                   type="number"
@@ -186,7 +186,7 @@ export default function Home() {
                 />
 
                 <TextField
-                  required
+            
                   label="Second Sem SGPA"
                   placeholder="Leave blank if no SGPA"
                   type="number"
@@ -194,7 +194,7 @@ export default function Home() {
                 />
 
                 <TextField
-                  required
+            
                   label="Third Sem SGPA"
                   placeholder="Leave blank if no SGPA"
                   type="number"
@@ -202,7 +202,7 @@ export default function Home() {
                 />
 
                 <TextField
-                  required
+            
                   label="Fourth Sem SGPA"
                   placeholder="Leave blank if no SGPA"
                   type="number"
@@ -210,7 +210,7 @@ export default function Home() {
                 />
 
                 <TextField
-                  required
+            
                   label="Fifth Sem SGPA"
                   placeholder="Leave blank if no SGPA"
                   type="number"
@@ -218,7 +218,7 @@ export default function Home() {
                 />
 
                 <TextField
-                  required
+            
                   label="Sixth Sem SGPA"
                   placeholder="Leave blank if no SGPA"
                   type="number"
@@ -226,7 +226,7 @@ export default function Home() {
                 />
 
                 <TextField
-                  required
+            
                   label="Seventh Sem SGPA"
                   placeholder="Leave blank if no SGPA"
                   type="number"
@@ -234,7 +234,7 @@ export default function Home() {
                 />
 
                 <TextField
-                  required
+            
                   label="Eighth Sem SGPA"
                   placeholder="Leave blank if no SGPA"
                   type="number"
