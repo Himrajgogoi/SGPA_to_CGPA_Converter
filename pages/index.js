@@ -1,4 +1,4 @@
-import Head from "next/head";
+
 import Image from "next/image";
 import {
   Box,
@@ -17,9 +17,9 @@ import {
   Avatar,
 } from "@mui/material";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { useState } from "react";
 import { Departments, Department_ug_credits } from "../components/departments";
 import Convert from "../components/CGPAConverter";
@@ -70,7 +70,6 @@ export default function Home() {
       ei_sem,
     ];
     sgpa = sgpa.filter((grade) => grade !== null && grade <= 10);
-    
 
     let result = Convert(sgpa, dept);
     setCgpa(result);
@@ -93,16 +92,24 @@ export default function Home() {
             src="/casual.jpg"
             sx={{ width: 60, height: 60 }}
           />
-          <br/>
-          <Typography  sx={{color:'black'}}>
+          <br />
+          <Typography sx={{ color: "black" }}>
             Hey there !,
             <br />I am Himraj Gogoi, a CSE student from 2019-2023 batch.
             Enthusiastic about programming, coding and new technologies, made
             this application using the powerful Next.js framework. Wanna
-            connect? Reach me on: 
-            <a href="https://www.linkedin.com/in/himraj-gogoi" target="__blank"><LinkedInIcon/></a>&nbsp;
-            <a  href="mailto:himrajgogoi2001@gmail.com" target="__blank"><EmailIcon/></a>&nbsp;
-            <a href="https://github.com/Himrajgogoi" target="__blank"><GitHubIcon/></a>
+            connect? Reach me on:
+            <a href="https://www.linkedin.com/in/himraj-gogoi" target="__blank">
+              <LinkedInIcon />
+            </a>
+            &nbsp;
+            <a href="mailto:himrajgogoi2001@gmail.com" target="__blank">
+              <EmailIcon />
+            </a>
+            &nbsp;
+            <a href="https://github.com/Himrajgogoi" target="__blank">
+              <GitHubIcon />
+            </a>
           </Typography>
         </Box>
       </Popover>
@@ -117,7 +124,7 @@ export default function Home() {
           minHeight: "100vh",
         }}
       >
-        <Typography variant="h3" sx={{color:'black'}}>
+        <Typography variant="h3" sx={{ color: "black" }}>
           SGPA to CGPA Converter{" "}
           <InfoOutlinedIcon size="large" onClick={openPopover} />
         </Typography>
@@ -238,7 +245,9 @@ export default function Home() {
             <Grid item xs={12} lg={8}>
               <Container>
                 <Box>
-                  <Typography variant="subtitle1"  sx={{color:'black'}}>Formula used:</Typography>
+                  <Typography variant="subtitle1" sx={{ color: "black" }}>
+                    Formula used:
+                  </Typography>
                   <br />
                   <Image
                     src="/cgpa_formula.png"
