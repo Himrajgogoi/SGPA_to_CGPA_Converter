@@ -94,7 +94,7 @@ export default function Home() {
             sx={{ width: 60, height: 60 }}
           />
           <br/>
-          <Typography>
+          <Typography  sx={{color:'black'}}>
             Hey there !,
             <br />I am Himraj Gogoi, a CSE student from 2019-2023 batch.
             Enthusiastic about programming, coding and new technologies, made
@@ -117,7 +117,7 @@ export default function Home() {
           minHeight: "100vh",
         }}
       >
-        <Typography variant="h3">
+        <Typography variant="h3" sx={{color:'black'}}>
           SGPA to CGPA Converter{" "}
           <InfoOutlinedIcon size="large" onClick={openPopover} />
         </Typography>
