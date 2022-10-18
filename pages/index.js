@@ -238,7 +238,7 @@ export default function Home() {
             <Grid item xs={12} lg={8}>
               <Container>
                 <Box>
-                  <Typography variant="subtitle1">Formula used:</Typography>
+                  <Typography variant="subtitle1"  sx={{color:'black'}}>Formula used:</Typography>
                   <br />
                   <Image
                     src="/cgpa_formula.png"
