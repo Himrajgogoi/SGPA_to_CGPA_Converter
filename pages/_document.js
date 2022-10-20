@@ -10,7 +10,7 @@ export default function Document() {
           name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
         />
-        <meta name="description" content="description of your project" />
+        <meta name="description" content="A simple SGPA to CGPA Converter" />
         <meta name="theme-color" content="white" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" href="/favicon.ico" />
