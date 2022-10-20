@@ -127,7 +127,7 @@ export default function Home() {
           minHeight: "100vh",
         }}
       >
-        <Typography variant="h3" sx={{ color: "black" }}>
+        <Typography variant="h3" sx={{ color: "black" }} ref={refCGPA}>
           SGPA to CGPA Converter{" "}
           <InfoOutlinedIcon size="large" onClick={openPopover} />
         </Typography>
@@ -135,7 +135,7 @@ export default function Home() {
         <br />
         {cgpa && (
           <Typography variant="h5" sx={{ color: "green" }}>
-            Your current CGPA:<b ref={refCGPA}> {cgpa}</b>
+            Your current CGPA:<b > {cgpa}</b>
           </Typography>
         )}
         <br />
