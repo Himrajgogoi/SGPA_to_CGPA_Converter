@@ -20,7 +20,7 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { useState } from "react";
+import { useState,useRef } from "react";
 import { Departments, Department_ug_credits } from "../components/departments";
 import Convert from "../components/CGPAConverter";
 
@@ -44,6 +44,8 @@ export default function Home() {
   const openPopover = (event) => {
     setAnchor(event.currentTarget);
   };
+
+  const refCGPA = useRef(null);
 
   const handleClose = () => {
     setAnchor(null);
@@ -73,6 +75,7 @@ export default function Home() {
 
     let result = dept !== null && sgpa.length >0 ? Convert(sgpa, dept): '0';
     setCgpa(result);
+    refCGPA.current?.scrollIntoView({behavior: 'smooth'});
   };
 
   return (
@@ -132,7 +135,7 @@ export default function Home() {
         <br />
         {cgpa && (
           <Typography variant="h5" sx={{ color: "green" }}>
-            Your current CGPA:<b> {cgpa}</b>
+            Your current CGPA:<b ref={refCGPA}> {cgpa}</b>
           </Typography>
         )}
         <br />
