@@ -98,7 +98,7 @@ export default function Home() {
           <br />
           <Typography sx={{ color: "black" }}>
             Hey there !,
-            <br />I am Himraj Gogoi, a CSE student from 2019-2023 batch.
+            <br />I am Himraj Gogoi, a CSE student from 2019-2023 batch from JEC.
             Enthusiastic about programming, coding and new technologies, made
             this application using the powerful Next.js framework. Wanna
             connect? Reach me on:
@@ -172,7 +172,7 @@ export default function Home() {
                     input={<OutlinedInput label="Department" />}
                   >
                     {Departments.map((name, index) => (
-                      <MenuItem key={index} value={index}>
+                      <MenuItem key={index} value={index} style={{whiteSpace: 'normal'}}>
                         {name}
                       </MenuItem>
                     ))}
