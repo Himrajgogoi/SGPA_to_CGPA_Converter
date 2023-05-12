@@ -2,6 +2,7 @@
 import Image from "next/image";
 import {
   Box,
+  Checkbox, 
   Grid,
   TextField,
   FormControl,
@@ -15,12 +16,13 @@ import {
   Container,
   Popover,
   Avatar,
+  FormControlLabel,
 } from "@mui/material";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { useState,useRef } from "react";
+import React, { useState,useRef } from "react";
 import { Departments, Department_ug_credits } from "../components/departments";
 import Convert from "../components/CGPAConverter";
 
@@ -28,6 +30,15 @@ export default function Home() {
   // setting the department and array of Sgpas.
   const [dept, setDept] = useState(null);
   const [cgpa, setCgpa] = useState(null);
+
+  //creating a bool variable
+  const [sem3, setSem3]=useState(false);
+
+  //creating a function for handling the checkbox event
+  // const handlecheck = (event, React.ChangeEvent<HTMLInputElement>)=>{
+  //   setSem3(event.target.checked);
+  //   console.log({sem3})
+  // }
 
   //sgpas of the 8 semesters
   const [f_sem, setFSem] = useState(null);
@@ -243,6 +254,17 @@ export default function Home() {
                   type="number"
                   onChange={(e) => setEiSem(parseFloat(e.target.value))}
                 />
+
+                <Checkbox 
+                  checked={sem3} 
+                  label = "Se"
+                  onChange={() => setSem3((prev)=>!(prev))}
+                />
+
+                <Typography variant="subtitle1" sx={{ color: "black" }}>
+                  Select if you're from B.Tech. 2021-2025 batch
+                </Typography>
+
               </Box>
             </Grid>
             <Grid item xs={12} lg={8}>
