@@ -84,7 +84,7 @@ export default function Home() {
     ];
     sgpa = sgpa.filter((grade) => grade !== null && grade <= 10);
 
-    let result = dept !== null && sgpa.length >0 ? Convert(sgpa, dept): '0';
+    let result = dept !== null && sgpa.length >0 ? Convert(sgpa, dept, sem3): '0';
     setCgpa(result);
     refCGPA.current?.scrollIntoView({behavior: 'smooth'});
   };
@@ -255,15 +255,11 @@ export default function Home() {
                   onChange={(e) => setEiSem(parseFloat(e.target.value))}
                 />
 
-                <Checkbox 
-                  checked={sem3} 
-                  label = "Se"
-                  onChange={() => setSem3((prev)=>!(prev))}
+                <FormControlLabel sx={{padding: "10px 0 0 10px"}}
+                control={<Checkbox />} 
+                label={<Typography color="textSecondary">Select the box if you're from B. Tech. 2021-2025 batch</Typography>} 
+                onChange={()=>setSem3((prev)=>!prev)}
                 />
-
-                <Typography variant="subtitle1" sx={{ color: "black" }}>
-                  Select if you're from B.Tech. 2021-2025 batch
-                </Typography>
 
               </Box>
             </Grid>
