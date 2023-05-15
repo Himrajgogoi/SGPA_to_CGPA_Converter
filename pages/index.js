@@ -257,7 +257,7 @@ export default function Home() {
 
                 <FormControlLabel sx={{padding: "10px 0 0 10px"}}
                 control={<Checkbox />} 
-                label={<Typography color="textSecondary">Select the box if you're from B. Tech. 2021-2025 batch</Typography>} 
+                label={<Typography color="textSecondary">Select the box if you are from B. Tech. 2021-2025 batch</Typography>} 
                 onChange={()=>setSem3((prev)=>!prev)}
                 />
 
